@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   let tabuadaHtml = '<p>Ana Carolina Almeida Paula</p>'
   tabuadaHtml += '<p>Atividade 1 de Programação para a Internet</p>'
   tabuadaHtml += `<h1>Tabuada do numero ${numero} até a sequência ${sequencia}</h1>`;
-  tabuadaHtml += '<table border="3"><tr><th>Número</th><th>Resultado</th></tr>';
+  tabuadaHtml += '<table><tr><th>Número</th><th>Resultado</th></tr>';
   for (let i = 1; i <= sequencia; i++) {
     const resultado = numero * i;
     tabuadaHtml += `<tr><td>${i}</td><td>${resultado}</td></tr>`;
