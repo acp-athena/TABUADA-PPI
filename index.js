@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
     tabuadaHtml += `<tr><td>${i}</td><td>${resultado}</td></tr>`;
   }
   tabuadaHtml += '</table>';
+  tabuadaHtml += '<h2>Para acessar outras tabuadas use esse exemplo: http://localhost:3001/?tabuada=3&sequencia=25;</h2>'
   const paginaHtml = `
     <!DOCTYPE html>
     <html>
@@ -64,6 +65,12 @@ app.get('/', (req, res) => {
           color: white;
           margin-top: 20px;
         }        
+
+        h2 {
+          text-align: center;
+          color: black;
+          margin-top: 20px;
+        }   
         </style>
     </head>
     <body>
