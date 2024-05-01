@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     tabuadaHtml += `<tr><td>${i}</td><td>${resultado}</td></tr>`;
   }
   tabuadaHtml += '</table>';
-  tabuadaHtml += '<h2>Para acessar outras tabuadas use esse exemplo: http://localhost:3001/?tabuada=3&sequencia=25;</h2>'
+  tabuadaHtml += '<h2>Para acessar outras tabuadas use esse exemplo: https://tabuada-ppi-lpwr.vercel.app/?tabuada=4&sequencia=20</h2>'
   const paginaHtml = `
     <!DOCTYPE html>
     <html>
