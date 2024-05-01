@@ -7,17 +7,17 @@ app.get('/', (req, res) => {
   const numero = parseInt(req.query.tabuada) || 1;
   const sequencia = parseInt(req.query.sequencia) || 10;
 
-  let tabuadaHtml = '<p>Ana Carolina Almeida Paula</p>'
-  tabuadaHtml += '<p>Atividade 1 de Programação para a Internet</p>'
-  tabuadaHtml += `<h1>Tabuada do numero ${numero} até a sequência ${sequencia}</h1>`;
-  tabuadaHtml += '<table><tr><th>Número</th><th>Resultado</th></tr>';
+  let tabHtml = '<p>Ana Carolina Almeida Paula</p>'
+  tabHtml += '<p>Atividade 1 de Programação para a Internet</p>'
+  tabHtml += `<h1>Tabuada do numero ${numero} até a sequência ${sequencia}</h1>`;
+  tabHtml += '<table><tr><th>Número</th><th>Resultado</th></tr>';
   for (let i = 1; i <= sequencia; i++) {
     const resultado = numero * i;
-    tabuadaHtml += `<tr><td>${i}</td><td>${resultado}</td></tr>`;
+    tabHtml += `<tr><td>${i}</td><td>${resultado}</td></tr>`;
   }
-  tabuadaHtml += '</table>';
-  tabuadaHtml += '<h2>Para acessar outras tabuadas use esse exemplo: https://tabuada-ppi-lpwr.vercel.app/?tabuada=4&sequencia=20</h2>'
-  const paginaHtml = `
+  tabHtml += '</table>';
+  tabHtml += '<h2>Para acessar outras tabuadas use esse exemplo: https://tabuada-ppi-lpwr.vercel.app/?tabuada=4&sequencia=20</h2>'
+  const pagHtml = `
     <!DOCTYPE html>
     <html>
     <head>
@@ -74,11 +74,11 @@ app.get('/', (req, res) => {
         </style>
     </head>
     <body>
-        ${tabuadaHtml}
+        ${tabHtml}
     </body>
     </html>
   `;
-  res.send(paginaHtml);
+  res.send(pagHtml);
 });
 
 app.listen(port, () => {
